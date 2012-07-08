@@ -1,0 +1,45 @@
+@(role: String)
+
+@main("Stream demonstration") {
+    
+    <h1>Connected as @role</h1>
+    
+    <form id="filter">
+        Lower bound: <input type="text" value="0" id="min">
+        Higher bound: <input type="text" value="1000" id="max">
+        <input type="submit" value="Filter">
+    </form>
+    
+    <div id="events"></div>
+    
+    <script type="text/javascript" charset="utf-8">
+    
+        var feed;
+        
+        var open = function(min, max) {
+            if(feed) {
+                feed.close()
+            }
+            
+            feed = new EventSource('/feed?role=@role&lower=' + min + '&higher=' + max)
+
+            feed.onmessage = function(e) {
+                var data = JSON.parse(e.data)
+                if(data.type == 'status') {
+                    $('#events').prepend("<p class='status'>STATUS: " + data.message + "</p>")
+                } else if(data.type == 'operation'){
+                    $('#events').prepend("<p class='operation " + data.visibility+ "'>OPERATION: €" + data.amount + "</p>")
+                }
+            }
+            
+            $('#events p').addClass('disabled')
+        }
+        
+        $('#filter').submit(function(e) {
+            e.preventDefault()
+            open($('#min').val(), $('#max').val())
+        }).submit()
+        
+    </script>
+    
+}

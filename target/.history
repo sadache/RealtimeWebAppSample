@@ -1,0 +1,8 @@
+run
+set offline := true
+run
+start -Dhttps.port=9443
+set offline := true
+run
+sh mate .
+run
