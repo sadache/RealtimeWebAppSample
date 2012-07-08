@@ -152,4 +152,4 @@ Snapshots of our Realtime Web App:
 
 Realtime Web involves dealing with different streams of data from different sources. It is hard to do any non-trivial application without having a programming model that contains an appropriate representation of a stream and necessary API for creating, adapting, filtering and consuming streams of data. Play2 uses `Iteratee`s to offer a programming model and a rich API.
 
-*[Full working application source](https://github.com/sadache/RealtimeWebAppSample) was created by me @sadache and @guillaumebort for one of our talks*
+*Note: [Full working application source](https://github.com/sadache/RealtimeWebAppSample) was created by me @sadache and @guillaumebort for one of our talks*
