@@ -144,9 +144,8 @@ All what we need now from the client side is to connect to the stream using the 
 
 Snapshots of our Realtime Web App:
 
-/manager
 ![](http://media.tumblr.com/tumblr_m6v2w8i3Ti1qde3be.png)
-/
+
 ![](http://media.tumblr.com/tumblr_m6v2wjdXts1qde3be.png)
 
 ### Bottom Line
