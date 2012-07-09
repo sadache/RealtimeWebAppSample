@@ -75,7 +75,7 @@ Now the model part of our application looks like:
 
 <script src="https://gist.github.com/3072893.js?file=Streams.scala"></script>
 
-### Our Realtime Web App features:
+### Our sample Realtime Web App features:
 
 Our application will publish this stream of `Event` as [Server Sent Event](http://dev.w3.org/html5/eventsource/) or [Comet](http://en.wikipedia.org/wiki/Comet_(programming)) (both are protocols for uni-directional socket from the server to the browser) and will be providing two simple features: 
 
